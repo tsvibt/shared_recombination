@@ -51,6 +51,7 @@ class Diploid():
 
    def subdivisions_max_two_recombination(self, subdivisions):
       subdivision_length = self.segment_count // subdivisions
+#      return np.max(self.max_two_recombinations[::subdivision_length, ::subdivision_length])
       return max(np.max(self.max_two_recombinations[::subdivision_length, ::subdivision_length]), 
                  np.max(self.max_two_recombinations[::subdivision_length, -1]), 
                  np.max(self.max_two_recombinations[-1, ::subdivision_length]), 

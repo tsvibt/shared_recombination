@@ -42,7 +42,7 @@ special_two_points = {0: 'first chromosome', 1: 'best chromosome', 60: 'best two
 things_plot(subdivision_two_average, 'red', special_two_points, 2)
 
 special_max = {}
-things_plot([(i, np.sqrt(i)*gaussian_max_numerical(2, 1, 0)) for i in x_axis if i<21] , 'pink', special_max, 2, label = 'computed expectation of best chromosome, k divisions')
+things_plot([(i, i*gaussian_max_numerical(2, 1/np.sqrt(i), 0)) for i in x_axis if 0<i<21] , 'pink', special_max, 2, label = 'computed expectation of best chromosome, k divisions')
 
 
 plt.ylabel("average SDs (the whole chromosome is standard gaussian)")

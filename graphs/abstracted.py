@@ -11,7 +11,7 @@ plt.rcParams["figure.autolayout"] = True
 fig, ax = plt.subplots()
 
 segment_count = 100
-sample_count = 3_00_000
+sample_count = 3_0_000
 
 Use_Cache = True
 def GetData(segment_count, sample_count): 
