@@ -6,3 +6,7 @@
 !*.sh
 !*.txt
 
+!images/
+!images/averages2.png
+
+
