@@ -13,22 +13,19 @@ fig, ax = plt.subplots()
 segment_count = 100
 sample_count = 3_0_000
 
+INDEX = Index('./caches/') 
 Use_Cache = True
 def GetData(segment_count, sample_count): 
-   index = Index('./caches/') 
    key = (segment_count, sample_count)
-   if Use_Cache and key in index: return index[key]
+   if Use_Cache and key in INDEX: return INDEX[key]
    else: 
       results = [Diploid(segment_count).datas() for _ in range(sample_count)]
-      index[key] = results
+      INDEX[key] = results
       return results
 
 print('getting data...')
 datas = GetData(segment_count, sample_count) 
 print('done getting data.')
-
-
-
 
 def plot_finish(plot):
    plot.legend()
